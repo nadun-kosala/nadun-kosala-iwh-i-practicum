@@ -1,0 +1,30 @@
+doctype html
+html 
+    head 
+        title= title
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body    
+        h1 Custom Objects - Cars List
+
+        nav
+            a.nav-link(href="/update-cobj") Add/Update this table
+
+        table.cars-table
+            thead
+                tr
+                    th ID
+                    th Name
+                    th Brand
+                    th Color
+                    th Created Date
+                    th Updated Date
+            tbody
+                each customObj in data
+                    tr
+                        td #{customObj.id}
+                        td #{customObj.properties.name || '-'}
+                        td #{customObj.properties.car_brand || '-'}
+                        td #{customObj.properties.car_color || '-'}
+                        td #{customObj.createdAt}
+                        td #{customObj.updatedAt}
