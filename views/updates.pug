@@ -1,13 +1,14 @@
 doctype html
 html(lang="en")
     head
-        title Add New Car
+        title= title
+        meta(name="viewport" content="width=device-width, initial-scale=1")
         link(rel="stylesheet", href="/css/style.css")
     body
         .form-wrapper
             h1 Add New Car Record
 
-            form(method="POST" action="/add-car")
+            form(method="POST" action="/update-cobj")
                 label(for="name") Car Name
                 input(type="text" name="name" id="name" required)
 
